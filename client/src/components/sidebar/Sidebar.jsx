@@ -8,10 +8,10 @@ import { IoMdHelpCircle } from "react-icons/io";
 import { MdWorkOutline } from "react-icons/md";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import { IoSchool } from "react-icons/io5";
-// import { Users } from "../../dummyData";
+import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
 
-const Sidebar=()=> {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -56,13 +56,13 @@ const Sidebar=()=> {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          {/* {Users.map((u) => (
+          {Users.map((u) => (
             <CloseFriend key={u.id} user={u} />
-          ))} */}
+          ))}
         </ul>
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;
