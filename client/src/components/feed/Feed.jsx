@@ -10,13 +10,13 @@ export default function Feed({ username }) {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = username
-        ? await axios.get("posts/timeline/622d38fa2855012de10c967c")
+        ? await axios.get("/posts/profile/" + username)
         : await axios.get("posts/timeline/622d38fa2855012de10c967c");
 
       setPosts(res.data);
     };
     fetchPosts();
-  }, []);
+  }, [username]);
   return (
     <div className="feed">
       <div className="feedWrapper">
