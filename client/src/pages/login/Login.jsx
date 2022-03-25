@@ -43,6 +43,7 @@ const Login = () => {
               className="loginInput"
               ref={password}
             />
+            {error && <p style={{ color: "red" }}>{error.response.data}</p>}
             <button className="loginButton" disabled={isFetching}>
               {isFetching ? (
                 <CircularProgress color="action" size="20px" />
