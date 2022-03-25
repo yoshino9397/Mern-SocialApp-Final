@@ -18,7 +18,7 @@ router.post("/register", async (req, res) => {
     const user = await newUser.save();
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 });
 
@@ -26,17 +26,26 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    !user && res.status(404).json("user not found");
-
+    /**
+     * this commented out code will return a response but will not exit out of the function,
+     * it will continue to execute whatever is below. Therefore, you should use a regular
+     * if statement and use the "return" keyword.
+     */
+    //
+    if (!user) {
+      return res.status(404).json("user not found");
+    }
     const validPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
-    !validPassword && res.status(400).json("wrong password");
-
+    if (!validPassword) {
+      return res.status(400).json("wrong password");
+    }
+    //we dont have to worry about explicitly returning this as it is the last line of this function
     res.status(200).json(user);
   } catch (err) {
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 });
 
