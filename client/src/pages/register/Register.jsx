@@ -5,9 +5,9 @@ const Register = () => {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Yoshinosocial</h3>
+          <h3 className="loginLogo">YYsocial</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Yoshinosocial.
+            Connect with friends and the world around you on YYsocial.
           </span>
         </div>
         <div className="loginRight">
@@ -17,7 +17,7 @@ const Register = () => {
             <input placeholder="Password" className="loginInput" />
             <input placeholder="Password Again" className="loginInput" />
             <button className="loginButton">Sign Up</button>
-            <button className="loginRegisterButton">Log into Account</button>
+            <button className="loginRegisterButton">Log in Account</button>
           </div>
         </div>
       </div>
