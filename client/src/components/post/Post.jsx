@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./post.css";
 import { MdOutlineMoreVert } from "react-icons/md";
-import { Users } from "../../dummyData";
 import axios from "axios";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
