@@ -39,7 +39,7 @@ const Login = () => {
               placeholder="Password"
               type="password"
               required
-              minLength="6"
+              minLength="5"
               className="loginInput"
               ref={password}
             />
