@@ -1,8 +1,12 @@
 import "./share.css";
-import { MdLabelImportant } from "react-icons/md";
-import { MdRoom } from "react-icons/md";
-import { MdPermMedia } from "react-icons/md";
-import { MdEmojiEmotions } from "react-icons/md";
+import { IconContext } from "react-icons";
+import {
+  MdLabelImportant,
+  MdRoom,
+  MdPermMedia,
+  MdEmojiEmotions,
+  MdCancel,
+} from "react-icons/md";
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
@@ -55,6 +59,17 @@ const Share = () => {
           />
         </div>
         <hr className="shareHr" />
+        {file && (
+          <div className="shareImgContainer">
+            <img className="shareImg" src={URL.createObjectURL(file)} alt="" />
+            <IconContext.Provider value={{ color: "gray", size: "30px" }}>
+              <MdCancel
+                className="shareCancelImg"
+                onClick={() => setFile(null)}
+              />
+            </IconContext.Provider>
+          </div>
+        )}
         <form className="shareBottom" onSubmit={submitHandler}>
           <div className="shareOptions">
             <label htmlFor="file" className="shareOption">
