@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const email = useRef();
@@ -21,13 +22,19 @@ const Login = () => {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">BFsocial</h3>
+          <h3 className="loginLogo" style={{ color: "#0b8eab" }}>
+            BFsocial
+          </h3>
           <span className="loginDesc">
             Connect with friends and the world around you on BFsocial.
           </span>
         </div>
         <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick}>
+          <form
+            className="loginBox"
+            onSubmit={handleClick}
+            style={{ height: "330px" }}
+          >
             <input
               placeholder="Email"
               type="email"
@@ -44,21 +51,40 @@ const Login = () => {
               ref={password}
             />
             {error && <p style={{ color: "red" }}>{error.response.data}</p>}
-            <button className="loginButton" disabled={isFetching}>
+            <button
+              className="loginButton"
+              disabled={isFetching}
+              style={{ backgroundColor: "#0b8eab" }}
+            >
               {isFetching ? (
                 <CircularProgress color="action" size="20px" />
               ) : (
                 "Log In"
               )}
             </button>
-            <span className="loginForgot">Forgot Password?</span>
-            <button className="loginRegisterButton">
-              {isFetching ? (
-                <CircularProgress color="action" size="20px" />
-              ) : (
-                "Create a New Account"
-              )}
-            </button>
+            <span className="loginForgot" style={{ color: "#2f4c58" }}>
+              Forgot Password?
+            </span>
+            <Link
+              to={"/register"}
+              style={{
+                display: "flex",
+                textDecoration: "none",
+                justifyContent: "center",
+              }}
+            >
+              <button
+                className="loginRegisterButton"
+                to={"/register"}
+                style={{ backgroundColor: "#9db33e" }}
+              >
+                {isFetching ? (
+                  <CircularProgress color="action" size="20px" />
+                ) : (
+                  "Create a New Account"
+                )}
+              </button>
+            </Link>
           </form>
         </div>
       </div>
