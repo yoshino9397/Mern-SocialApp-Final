@@ -73,6 +73,6 @@
 
 .postCommentText {
   cursor: pointer;
-  border-bottom: 1px dashed gray;
+  border-bottom: 1px dashed #636f44;
   font-size: 15px;
 }

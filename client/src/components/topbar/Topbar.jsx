@@ -14,7 +14,7 @@ const Topbar = () => {
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">YYsocial</span>
+          <span className="logo">BFsocial</span>
         </Link>
       </div>
       <div className="topbarCenter">
@@ -42,7 +42,7 @@ const Topbar = () => {
           </div>
           <div className="topbarIconItem">
             <NotificationsIcon />
-            <span className="topbarIconBadge">1</span>
+            <span className="topbarIconBadge">4</span>
           </div>
         </div>
         <Link to={`/profile/${user.username}`}>

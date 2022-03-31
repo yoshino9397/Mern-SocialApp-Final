@@ -73,7 +73,7 @@ const Share = () => {
         <form className="shareBottom" onSubmit={submitHandler}>
           <div className="shareOptions">
             <label htmlFor="file" className="shareOption">
-              <MdPermMedia htmlColor="tomato" className="shareIcon" />
+              <MdPermMedia className="shareIcon" style={{ color: "#df7e8a" }} />
               <span className="shareOptionText">Photo or Video</span>
               <input
                 style={{ display: "none" }}
@@ -84,15 +84,21 @@ const Share = () => {
               />
             </label>
             <div className="shareOption">
-              <MdLabelImportant htmlColor="blue" className="shareIcon" />
+              <MdLabelImportant
+                style={{ color: "#2b6684" }}
+                className="shareIcon"
+              />
               <span className="shareOptionText">Tag</span>
             </div>
             <div className="shareOption">
-              <MdRoom htmlColor="green" className="shareIcon" />
+              <MdRoom style={{ color: "#628272" }} className="shareIcon" />
               <span className="shareOptionText">Location</span>
             </div>
             <div className="shareOption">
-              <MdEmojiEmotions htmlColor="goldenrod" className="shareIcon" />
+              <MdEmojiEmotions
+                style={{ color: "#eab354" }}
+                className="shareIcon"
+              />
               <span className="shareOptionText">Feelings</span>
             </div>
           </div>

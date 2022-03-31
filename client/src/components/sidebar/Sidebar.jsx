@@ -1,13 +1,10 @@
 import "./sidebar.css";
-import { MdRssFeed } from "react-icons/md";
+import { MdRssFeed, MdWorkOutline } from "react-icons/md";
 import { GiChatBubble } from "react-icons/gi";
-import { IoPlayCircleOutline } from "react-icons/io5";
+import { IoPlayCircleOutline, IoSchool } from "react-icons/io5";
 import { TiGroup } from "react-icons/ti";
-import { BsBookmarkCheckFill } from "react-icons/bs";
+import { BsBookmarkCheckFill, BsFillCalendarEventFill } from "react-icons/bs";
 import { IoMdHelpCircle } from "react-icons/io";
-import { MdWorkOutline } from "react-icons/md";
-import { BsFillCalendarEventFill } from "react-icons/bs";
-import { IoSchool } from "react-icons/io5";
 import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
 
