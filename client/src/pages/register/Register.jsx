@@ -2,6 +2,7 @@ import "./register.css";
 import { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const username = useRef();
@@ -33,9 +34,11 @@ const Register = () => {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">YYsocial</h3>
+          <h3 className="loginLogo" style={{ color: "#0b8eab" }}>
+            BFsocial
+          </h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on YYsocial.
+            Connect with friends and the world around you on BFsocial.
           </span>
         </div>
         <div className="loginRight">
@@ -68,10 +71,28 @@ const Register = () => {
               required
               type="password"
             />
-            <button className="loginButton" type="submit">
+            <button
+              className="loginButton"
+              type="submit"
+              style={{ backgroundColor: "#0b8eab" }}
+            >
               Sign Up
             </button>
-            <button className="loginRegisterButton">Log in Account</button>
+            <Link
+              to={"/login"}
+              style={{
+                display: "flex",
+                textDecoration: "none",
+                justifyContent: "center",
+              }}
+            >
+              <button
+                className="loginRegisterButton"
+                style={{ backgroundColor: "#9db33e" }}
+              >
+                Log in Account
+              </button>
+            </Link>
           </form>
         </div>
       </div>
