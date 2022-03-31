@@ -48,13 +48,13 @@ const Rightbar = ({ user }) => {
   const HomeRightbar = () => {
     return (
       <>
+        <img className="rightbarAd" src={`${PF}ad.jpg`} alt="" />
         <div className="birthdayContainer">
           <img className="birthdayImg" src={`${PF}gift.png`} alt="" />
           <span className="birthdayText">
-            <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
+            <b>Ash</b> and <b>2 other friends</b> have a birthday in this month.
           </span>
         </div>
-        <img className="rightbarAd" src={`${PF}ad.png`} alt="" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
