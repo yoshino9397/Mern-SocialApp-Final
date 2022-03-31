@@ -1,53 +1,53 @@
 export const Users = [
   {
     id: 1,
-    profilePicture: "person/1.jpeg",
-    username: "Safak Kocaoglu",
+    profilePicture: "person/ash.jpg",
+    username: "Ash Lynx",
   },
   {
     id: 2,
-    profilePicture: "person/2.jpeg",
-    username: "Janell Shrum",
+    profilePicture: "person/eiji.png",
+    username: "Eiji Okumura",
   },
   {
     id: 3,
-    profilePicture: "person/3.jpeg",
-    username: "Alex Durden",
+    profilePicture: "person/shorter.png",
+    username: "Shorter Wong",
   },
   {
     id: 4,
-    profilePicture: "person/4.jpeg",
-    username: "Dora Hawks",
+    profilePicture: "person/shin.jpeg",
+    username: "Sing Soo-ling ",
   },
   {
     id: 5,
-    profilePicture: "person/5.jpeg",
-    username: "Thomas Holden",
+    profilePicture: "person/max.jpeg",
+    username: "Max Lobo",
   },
   {
     id: 6,
-    profilePicture: "person/6.jpeg",
-    username: "Shirley Beauchamp",
+    profilePicture: "person/yue.png",
+    username: "Li Yue-Long",
   },
   {
     id: 7,
-    profilePicture: "person/7.jpeg",
-    username: "Travis Bennett",
+    profilePicture: "person/blanca.jpeg",
+    username: "Blanca",
   },
   {
     id: 8,
-    profilePicture: "person/8.jpeg",
-    username: "Kristen Thomas",
+    profilePicture: "person/alex.jpeg",
+    username: "Alex",
   },
   {
     id: 9,
-    profilePicture: "person/9.jpeg",
-    username: "Gary Duty",
+    profilePicture: "person/bones.jpeg",
+    username: "Bones",
   },
   {
     id: 10,
-    profilePicture: "person/10.jpeg",
-    username: "Safak Kocaoglu",
+    profilePicture: "person/kong.webp",
+    username: "Kong",
   },
 ];
 

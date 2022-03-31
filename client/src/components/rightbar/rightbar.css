@@ -9,12 +9,13 @@
 .birthdayContainer {
   display: flex;
   align-items: center;
+  margin: 0 0 30px 0;
 }
 
 .birthdayImg {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 50px;
+  height:50px;
+  margin-right: 6px;
 }
 
 .birthdayText {
@@ -25,7 +26,7 @@
 .rightbarAd {
   width: 100%;
   border-radius: 10px;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .rightbarTitle {

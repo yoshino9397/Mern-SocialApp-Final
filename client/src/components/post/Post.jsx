@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./post.css";
 import { MdOutlineMoreVert } from "react-icons/md";
+import { BsEmojiHeartEyesFill } from "react-icons/bs";
 import axios from "axios";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
@@ -62,17 +63,15 @@ const Post = ({ post }) => {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img
-              className="likeIcon"
-              src={`${PF}like.png`}
+            <BsEmojiHeartEyesFill
               onClick={likeHandler}
-              alt=""
-            />
-            <img
-              className="likeIcon"
-              src={`${PF}heart.png`}
-              onClick={likeHandler}
-              alt=""
+              style={{
+                width: "18px",
+                height: "18px",
+                margin: "0 5px 0 0 ",
+                cursor: "pointer",
+                color: "#d73d6c"
+              }}
             />
             <span className="postLikeCounter">{like} people like it</span>
           </div>
