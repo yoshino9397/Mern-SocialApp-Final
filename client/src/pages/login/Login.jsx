@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const email = useRef();
   const password = useRef();
-  const { user, isFetching, dispatch, error } = useContext(AuthContext);
+  const { isFetching, dispatch, error } = useContext(AuthContext);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const Login = () => {
       dispatch
     );
   };
-  console.log(user);
+
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -36,14 +36,14 @@ const Login = () => {
             style={{ height: "330px" }}
           >
             <input
-              placeholder="Email"
+              placeholder="Email:eijiokumura@gmail.com"
               type="email"
               required
               className="loginInput"
               ref={email}
             />
             <input
-              placeholder="Password"
+              placeholder="Password:1111111"
               type="password"
               required
               minLength="5"
