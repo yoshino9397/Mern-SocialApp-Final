@@ -65,6 +65,11 @@ const Rightbar = ({ user }) => {
     );
   };
 
+  const linkStyle = {
+    textDecoration: "none",
+    color: "black",
+  };
+
   const ProfileRightbar = () => {
     return (
       <>
@@ -84,24 +89,11 @@ const Rightbar = ({ user }) => {
             <span className="rightbarInfoKey">From:</span>
             <span className="rightbarInfoValue">{user.from}</span>
           </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">
-              {user.relationship === 1
-                ? "Single"
-                : user.relationship === 1
-                ? "Married"
-                : "-"}
-            </span>
-          </div>
         </div>
         <h4 className="rightbarTitle">User friends</h4>
         <div className="rightbarFollowings">
           {friends.map((friend) => (
-            <Link
-              to={"/profile/" + friend.username}
-              style={{ textDecoration: "none" }}
-            >
+            <Link to={"/profile/" + friend.username} style={linkStyle}>
               <div className="rightbarFollowing">
                 <img
                   src={

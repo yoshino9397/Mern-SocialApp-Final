@@ -34,12 +34,13 @@ const Post = ({ post }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
+
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <Link to={`/profile/${user.username}`}>
+            <Link to={`/profile/${user.username}`} >
               <img
                 className="postProfileImg"
                 src={
@@ -70,10 +71,10 @@ const Post = ({ post }) => {
                 height: "18px",
                 margin: "0 5px 0 0 ",
                 cursor: "pointer",
-                color: "#d73d6c"
+                color: "#d73d6c",
               }}
             />
-            <span className="postLikeCounter">{like} people like it</span>
+            <span className="postLikeCounter">{like} like</span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText">{post.comment} comments</span>
