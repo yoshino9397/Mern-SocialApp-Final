@@ -18,7 +18,6 @@ const Post = ({ post }) => {
     setIsLiked(post.likes.includes(currentUser._id));
   }, [currentUser._id, post.likes]);
   ///Prevent it from becoming disliked if you press the like button twice！
-
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(`/users?userId=${post.userId}`);
@@ -40,7 +39,7 @@ const Post = ({ post }) => {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <Link to={`/profile/${user.username}`} >
+            <Link to={`/profile/${user.username}`}>
               <img
                 className="postProfileImg"
                 src={
